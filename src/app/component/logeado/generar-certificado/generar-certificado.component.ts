@@ -893,16 +893,25 @@ export class GenerarCertificadoComponent implements OnInit {
 
       if (this.datos.periodOne === 'ENERO - FEBRERO') {
         this.datos.periodOne = 'ENERO'
+        this.datos.periodTwo = 'FEBRERO'
       } else if (this.datos.periodOne === 'JULIO - AGOSTO') {
         this.datos.periodOne = 'JULIO'
+        this.datos.periodTwo = 'AGOSTO'
       } else if (this.datos.periodOne === 'MARZO - ABRIL') {
         this.datos.periodOne = 'MARZO'
+        this.datos.periodTwo = 'ABRIL'
       } else if (this.datos.periodOne === 'MAYO - JUNIO') {
         this.datos.periodOne = 'MAYO'
+        this.datos.periodTwo = 'JUNIO'
+
       } else if (this.datos.periodOne === 'NOVIEMBRE - DICIEMBRE') {
         this.datos.periodOne = 'NOVIEMBRE'
+        this.datos.periodTwo = 'DICIEMBRE'
+
       } else if (this.datos.periodOne === 'SEPTIEMBRE - OCTUBRE') {
         this.datos.periodOne = 'SEPTIEMBRE'
+        this.datos.periodTwo = 'OCTUBRE'
+
       }
     }
 
