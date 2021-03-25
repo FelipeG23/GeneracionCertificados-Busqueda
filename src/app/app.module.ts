@@ -13,6 +13,8 @@ import { GenerarCertificadoComponent } from './component/logeado/generar-certifi
 import { AppRoutingModule } from './app-routing.module';
 import { PruebaComponent } from './component/prueba/prueba.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -34,7 +36,9 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatButtonModule,
     HttpClientModule,
     MatAutocompleteModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

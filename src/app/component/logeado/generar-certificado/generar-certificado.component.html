@@ -1,10 +1,19 @@
 <div class="container">
+  <div class="row" [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Numero de Identificacion</mat-label>
+        <input formControlName="userProviderNit" [(ngModel)]="userProviderNit"  type="text"  matInput/>
+      </mat-form-field>
+      <button (click)='buscarPersona()' type='submit' mat-raised-button class="buttonCA-second mat-raised-button" >BUSCAR</button>
+  </div>
+</div>
+<div class="container" *ngIf="mostrar">
   <div class="d-flex justify-content-center mt-4">
     <mat-card class="card col-lg-5" style="background-color: #ffffffa5;">
       <form novalidate (ngSubmit)="onSubmit()" [formGroup]="resolvePassword" #myform="ngForm" autocomplete="off">
 
         <div class="text-center mt-4">
-          <img src="./assets/images/fsfb.png" alt="Logo fundación" class="logo" />
+          <img src="/wps/contenthandler/dav/fs-type1/themes/PROVEEDORES-Home/images/santafelogo.png" alt="Logo fundación" class="logo" />
         </div>
         <div class="container">
           <div class="container mt-5">
@@ -13,12 +22,6 @@
         </div>
         <div class="container">
           <div class="mt-5">
-            <div class="mt-2">
-              <mat-form-field>
-                <input id="userProviderNit" formControlName="userProviderNit" matInput [(ngModel)]="userProviderNit"  type="text" />
-              </mat-form-field>
-              <button (click)='buscarPersona()' type='button' >BUSCAR</button>
-            </div>
             <mat-form-field class="w-100">
               <mat-label>Tipo de certificado</mat-label>
               <mat-select formControlName="documentType" [(value)]="document"
